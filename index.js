@@ -236,7 +236,7 @@ bot.on("message", function (message) {
 
   //GIVEAWAY
       case "giveaway":
-        message.channel.sendMessage("Giveaway d'" + (giveaway[Math.floor(Math.random() * giveaway.length)]) + ", pour participer tapez sur le chat 'Je participe suce moi' ! Fin du giveaway dans une minute ! Limité à 25 participations ! Go Go Go !")
+        message.channel.sendMessage("Giveaway d'" + (giveaway[Math.floor(Math.random() * giveaway.length)]) + ", pour participer tapez sur le chat '**Je participe suce moi**' ! Fin du giveaway dans une minute ! Limité à 25 participations ! Go Go Go !")
         .then(() => {
         message.channel.awaitMessages(response => response.content === 'Je participe suce moi', {
           max: 25,
@@ -389,7 +389,7 @@ bot.on("message", function (message) {
        .setAuthor("CA FAIT DEUX JOURS QUE JE COINCE DANS CE LABYRINTHE, Ą̸͈̰̝͑͛͒̌̎̈́ ̸̫̊̑L̸̥̘͋͜͝'̵̢̗͓̭̭̌Ȃ̴̡̦̍͐̕̕ͅḮ̴͍̦̠̱̫̍̚D̴͕̟̞̥̬͉͌̈́͋̿͝É̶̮̫̿̽̾̂È̶̢̛͋͆͘ͅẺ̶͓͇̓͊͋̑̚Ȩ̴̙̱̼͋̾͂E̴̖̞̺̥̍͗̓̇̓̈́Ę̶̪͓̫̆Ȩ̵̈́̽́̓Ę̶̠͖̥́̌́̏͝E̶̦͛̌͑̆E̴̦͖̥̹͚̾E̷̳͖̜͒͆͠E̷͈̯̘̙̼͊̒Ę̶͕̙͍͊̓̾E̵͇̞̲̫̓͋Ȩ̴̥͇̼̿͜É̶̲̮̜̯̔͗Ë̴͕͖̄̅̿Ĕ̵̟͖̹͖̄")
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
-       .setDescription("Le bot est actif de 10h à 23h. Le bot est hébergé sur mon ordinateur, je ne peux pas encore le faire marcher 24h/24. Le bot peut être down des fois car j'ajoute des commandes.\n**Mise à jour (03/01/2018) ! Nouvelles commandes, nouveaux secrets, nouveaux status de jeux. J'ai aussi fixé ce foutu bug du crash du bot après le spam d'une commande vocale.**")
+       .setDescription("Bot maintenant hébergé sur Heroku. Le bot peut être dès fois en maintenance.\n **Mise à jour (04/01/2018) : Bot maintenant hébergé. Il peut maintenant être en ligne 24h/24 7j/7.**")
        .setFooter("Bot crée par Flygoow, avec DiscordJS.", "https://i.imgur.com/vUJwkr1.png")
        .setTimestamp()
        .addField("Commandes audio", " Labyrinthe : ,laby \nOurs : ,ours \nCrise : ,crise \nRubiks Cube : ,cube ou ,rubiks \nCarte cadeau Google Play : ,carte ou ,googleplay \nCarte cadeau EAR RAPE : ,earrape \nAléatoire : ,intro \nPour que le bot se casse : ,leave ou ,stop")
@@ -402,8 +402,8 @@ bot.on("message", function (message) {
        .setAuthor("Ą̸͈̰̝͑͛͒̌̎̈́ ̸̫̊̑L̸̥̘͋͜͝'̵̢̗͓̭̭̌Ȃ̴̡̦̍͐̕̕ͅḮ̴͍̦̠̱̫̍̚D̴͕̟̞̥̬͉͌̈́͋̿͝É̶̮̫̿̽̾̂È̶̢̛͋͆͘ͅẺ̶͓͇̓͊͋̑̚Ȩ̴̙̱̼͋̾͂E̴̖̞̺̥̍͗̓̇̓̈́Ę̶̪͓̫̆Ȩ̵̈́̽́̓Ę̶̠͖̥́̌́̏͝E̶̦͛̌͑̆E̴̦͖̥̹͚̾E̷̳͖̜͒͆͠E̷͈̯̘̙̼͊̒Ę̶͕̙͍͊̓̾E̵͇̞̲̫̓͋Ȩ̴̥͇̼̿͜É̶̲̮̜̯̔͗Ë̴͕͖̄̅̿Ĕ̵̟͖̹͖̄")
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
-       .setDescription("Le bot est actif de 10h à 23h. Le bot est hébergé sur mon ordinateur, je ne peux pas encore le faire marcher 24h/24. Le bot peut être down des fois car j'ajoute des commandes.\n **Mise à jour (03/01/2018) ! Nouvelle commande, nouveaux secrets, nouveaux status de jeux. J'ai aussi fixé ce foutu bug du crash du bot après le spam d'une commande vocale.**")
-       .setFooter("Bot crée par Flygoow, avec DiscordJS.", "https://i.imgur.com/vUJwkr1.png")
+       .setDescription("Bot maintenant hébergé sur Heroku. Le bot peut être dès fois en maintenance.\n **Mise à jour (04/01/2018) : Bot maintenant hébergé. Il peut maintenant être en ligne 24h/24 7j/7.**")
+       .setFooter("Bot crée par Flygoow, avec Nodejs et Discord.js. [GitHub](https://github.com/Flygoow/CoDForlanBot)", "https://i.imgur.com/vUJwkr1.png")
        .setTimestamp()
        .addField("Commandes audio", " Labyrinthe : ,laby \nOurs : ,ours \nCrise : ,crise \nRubiks Cube : ,cube ou ,rubiks \nCarte cadeau Google Play : ,carte ou ,googleplay \nCarte cadeau EAR RAPE : ,earrape \nAléatoire : ,intro \nPour que le bot se casse : ,leave ou ,stop")
        .addField("Commandes textuelles", " Giveaway : ,giveaway");
