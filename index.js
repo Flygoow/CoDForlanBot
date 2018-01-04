@@ -69,7 +69,7 @@ bot.on('ready',() => {
 bot.on('message', (message) => {
     if (message.author.equals(bot.user)) return;
 
-        if(message.content.match (/Cod Forlan/i) || message.content.match (/CodForlan/i) || message.content.match (/Forlan/i) && (message.content.match (/merde/i)) || (message.content.match (/pute/i))) {
+        if(message.content.match (/Cod Forlan/i) && (message.content.match (/merde/i)) || (message.content.match (/pute/i))) {
         //Réponse aux insultes
         message.channel.sendMessage("Qu'est ce que tu viens de dire à propos de moi, petite salope ?")
         message.channel.sendFile("./Images/delet.png")
