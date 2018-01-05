@@ -390,7 +390,7 @@ bot.on("message", function (message) {
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
        .setDescription("Bot maintenant hébergé sur Heroku. Le bot peut parfois être en maintenance.\n**Mise à jour (04/01/2018) : Bot maintenant hébergé. Il peut maintenant être en ligne 24h/24 7j/7.**")
-       .setFooter("Bot crée par Flygoow, avec DiscordJS.", "https://i.imgur.com/vUJwkr1.png")
+       .setFooter("Bot crée par Flygoow, avec Nodejs et Discord.js. https://github.com/Flygoow/CoDForlanBot", "https://i.imgur.com/vUJwkr1.png")
        .setTimestamp()
        .addField("Commandes audio", " Labyrinthe : ,laby \nOurs : ,ours \nCrise : ,crise \nRubiks Cube : ,cube ou ,rubiks \nCarte cadeau Google Play : ,carte ou ,googleplay \nCarte cadeau EAR RAPE : ,earrape \nAléatoire : ,intro \nPour que le bot se casse : ,leave ou ,stop")
        .addField("Commandes textuelles", " Giveaway : ,giveaway");
@@ -403,7 +403,7 @@ bot.on("message", function (message) {
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
        .setDescription("Bot maintenant hébergé sur Heroku. Le bot peut parfois être en maintenance.\n**Mise à jour (04/01/2018) : Bot maintenant hébergé. Il peut maintenant être en ligne 24h/24 7j/7.**")
-       .setFooter("Bot crée par Flygoow, avec Nodejs et Discord.js. [GitHub](https://github.com/Flygoow/CoDForlanBot)", "https://i.imgur.com/vUJwkr1.png")
+       .setFooter("Bot crée par Flygoow, avec Nodejs et Discord.js. https://github.com/Flygoow/CoDForlanBot", "https://i.imgur.com/vUJwkr1.png")
        .setTimestamp()
        .addField("Commandes audio", " Labyrinthe : ,laby \nOurs : ,ours \nCrise : ,crise \nRubiks Cube : ,cube ou ,rubiks \nCarte cadeau Google Play : ,carte ou ,googleplay \nCarte cadeau EAR RAPE : ,earrape \nAléatoire : ,intro \nPour que le bot se casse : ,leave ou ,stop")
        .addField("Commandes textuelles", " Giveaway : ,giveaway");
