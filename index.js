@@ -136,6 +136,23 @@ bot.on("message", function (message) {
       }
       break;
 
+       case "chips":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (message.member.voiceChannel) {
+        message.member.voiceChannel.join()
+        .then (connection => {
+        const stream = message.guild.voiceConnection.playStream("MP3/chips verte.wav")
+        stream.on('end', () => (message.guild.voiceConnection).disconnect())
+        if (message.content === ",earrape") 
+        stream.on (message.guild.voiceChannel).leave()
+        })
+      } else {
+      return;
+      }
+      break;
+
   //LABYRINTHE
     case "labi":
         if (!message.member.voiceChannel) {
