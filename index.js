@@ -30,7 +30,7 @@ var servers = {};
     "un Mac Book Air d'une valeur de 1000€",
     "une carte Google Play d'une valeur de 100€",
     "un Burger d'OR d'une valeur de 200€",
-    "un GPM en retard"
+    "un onk mignon"
   ]
 
   var intro = [
