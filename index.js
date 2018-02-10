@@ -39,7 +39,6 @@ var servers = {};
     "MP3/crise.wav",
     "MP3/chips verte.wav",
     "MP3/rubik.wav",
-    "MP3/CARTTTE.wav",
     "MP3/carte.wav",
     "MP3/jumelles.wav",
     "MP3/amoureux.wav"
