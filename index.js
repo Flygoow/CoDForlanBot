@@ -438,6 +438,24 @@ bot.on("message", function (message) {
       }
       break;
 
+  //TG
+          case "tg":
+       if (!message.member.voiceChannel) {
+       return;
+       }
+       if (message.member.voiceChannel) {
+       message.member.voiceChannel.join()
+       .then (connection => {
+       const stream = message.guild.voiceConnection.playStream("MP3/tg.mp3")
+       stream.on('end', () => (message.guild.voiceConnection).disconnect())
+       if (message.content === "::tg") 
+       return;
+       })
+       } else {
+       return;
+       }
+    break;
+      
   //GOOGLE PLAY
     case "googleplay":
         if (!message.member.voiceChannel) {
