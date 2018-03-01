@@ -681,7 +681,7 @@ bot.on("message", function (message) {
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks\n**Chip verte** - ::chip ou ::chips \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
-       .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
+       .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire** - ::citationvoc\n**Ta gueule** - ::tg\n**Pour que le bot dégage** - ::stop ou ::leave")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres [B]** - ::titre")
       message.channel.sendEmbed(embed);
       break;
@@ -698,7 +698,7 @@ bot.on("message", function (message) {
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Chip verte** - ::chip ou ::chips\n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
-       .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
+       .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire** - ::citationvoc\n**Ta gueule** - ::tg\n**Pour que le bot dégage** - ::stop ou ::leave")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres [B]** - ::titre")
       message.channel.sendEmbed(embed);
       break;
