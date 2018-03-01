@@ -656,7 +656,7 @@ bot.on("message", function (message) {
        .setAuthor((citation[Math.floor(Math.random() * citation.length)]))
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
-       .setFooter("Bot créé par Flygoow, avec DiscordJS.\n Astuce : ", "https://i.imgur.com/vUJwkr1.png")
+       .setFooter("Bot créé par Flygoow, avec DiscordJS.", "https://i.imgur.com/vUJwkr1.png")
        .setDescription("📄 = Commandes textuelles.\n🎙 = Commandes audio\n[B] = Commandes en cours de développement")
 
        .addBlankField(true)
