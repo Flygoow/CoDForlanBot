@@ -188,6 +188,24 @@ bot.on("message", function (message) {
       return;
       }
       break;
+      
+      case "chips":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (message.member.voiceChannel) {
+        message.member.voiceChannel.join()
+        .then (connection => {
+        const stream = message.guild.voiceConnection.playStream("MP3/chips verte.wav")
+        stream.on('end', () => (message.guild.voiceConnection).disconnect())
+        if (message.content === "::chip") 
+        stream.on (message.guild.voiceChannel).leave()
+        })
+      } else {
+      return;
+      }
+      break;
+
 
   //LABYRINTHE
     case "labi":
@@ -661,7 +679,7 @@ bot.on("message", function (message) {
 
        .addBlankField(true)
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
-       .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
+       .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks\n**Chip verte** - ::chip ou ::chips \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
        .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres [B]** - ::titre")
@@ -678,7 +696,7 @@ bot.on("message", function (message) {
 
        .addBlankField(true)
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
-       .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
+       .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Chip verte** - ::chip ou ::chips\n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
        .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres [B]** - ::titre")
