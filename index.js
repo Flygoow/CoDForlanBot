@@ -339,9 +339,9 @@ bot.on("message", function (message) {
        if (message.member.voiceChannel) {
        message.member.voiceChannel.join()
        .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
+       const stream = message.guild.voiceConnection.playStream("MP3/chat.wav")
        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::cube") 
+       if (message.content === "::chat") 
       stream.on (message.guild.voiceChannel).leave()
        return;
        })
