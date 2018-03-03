@@ -317,9 +317,9 @@ bot.on("message", function (message) {
        if (message.member.voiceChannel) {
        message.member.voiceChannel.join().catch(console.error)
        .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
+       const stream = message.guild.voiceConnection.playStream("MP3/chat.wav")
        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::cube") 
+       if (message.content === "::chat") 
       stream.on (message.guild.voiceChannel).leave().catch(console.error)
        return;
        })
@@ -680,7 +680,7 @@ bot.on("message", function (message) {
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
        .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire [N'existe pas encore] [B]** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
-       .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n **Générateur de titres [B]** - ::titre")
+       .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres** - ::titre")
       message.channel.sendEmbed(embed);
       break;
 
@@ -696,7 +696,7 @@ bot.on("message", function (message) {
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
        .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire [N'existe pas encore] [B]** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
-       .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n **Générateur de titres [B]** - ::titre")
+       .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres** - ::titre")
       message.channel.sendEmbed(embed);
       break;
   }
