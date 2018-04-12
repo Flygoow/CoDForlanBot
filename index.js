@@ -97,17 +97,15 @@ var servers = {};
     "MP3/Amazon.wav"
   ]
   var game = [
-    ({ game: { name: "Cette fille s'est suicidée à cause de cette vidéo. quand je l'ai vu, j'ai été détruit...", type: 3, url: "https://www.youtube.com/watch?v=lBUIgZhtZ74"} }),
-    ({ game: { name: "Une fille aide la police a apprivoiser un ours polaire sauvage…", type: 3, url: "https://www.youtube.com/watch?v=DECWgDPv3As"} }),
-    ({ game: { name: "Je suis bloqué dans ce labyrinthe depuis 2 jours, envoyez moi de l'aide...", type: 3, url: "https://www.youtube.com/watch?v=PJ1ZghbmqXc"} }),
-    ({ game: { name: "Si je n'avais pas filmé ma prof en train de faire ça, personne ne m'aurait cru...", type: 3, url: "https://www.youtube.com/watch?v=lk6LtG4584M"} }),
-    ({ game: { name: "Un enfant tombe accidentellement sur son amoureuse en sport...", type: 3, url: "https://www.youtube.com/watch?v=QHfwHE4BnpQ"} }),
-    ({ game: { name: "Si j'avais pas filmé ça, personne ne m'aurait cru...", type: 3, url: "https://www.youtube.com/watch?v=6Dmm3IQr6q8"} }),
-    ({ game: { name: "Un chien retrouve son maitre après 3 ans de séparation...", type: 3, url: "https://www.youtube.com/watch?v=6YevuTWaIrc"} }),
-    ({ game: { name: "Des jumelles se rencontrent pour la toute première fois...", type: 3, url: "https://www.youtube.com/watch?v=GAZSfsSwRHE"} }),
-    ({ game: { name: "il a essayé d'empêcher la vitre de se casser...", type: 3, url: "https://www.youtube.com/watch?v=uQXqBmueGJE"} }),
-    ({ game: { name: "il a essayé d'empêcher la vitre de se casser...", type: 3, url: "https://www.youtube.com/watch?v=uQXqBmueGJE"} }),
-    ({ game: { name: "G Rex - SHUT UP!", type: 2 } })
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+    ({ game: { name: "rip codforlan - ::help", type: 3} }),
+
     
   ]
 
