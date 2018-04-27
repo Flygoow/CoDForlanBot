@@ -15,7 +15,9 @@ var servers = {};
     "Un enfant",
     "Mon copain",
     "La voix de cette fille",
-    "Elle"
+    "Elle",
+    "Ninja",
+    "La météorite",
   ]
 
   var titre2 = [
@@ -24,12 +26,18 @@ var servers = {};
     " m'a quitté...",
     " dit des gros mots !!",
     " pensait que son live était coupé...",
-    " est morte dans ce manège..."
+    " est morte dans ce manège...",
+    " s'est écrasée sur Fortnite Battle Royale...",
+    " trouve une Scar en diamant sur Fortnite Battle Royale...",
+    ' a battu le record du monde de "Victoires" sur Fortnite Battle Royale...'
   ]
 
   var titre3 = [
     " Et il marche !",
     " Quand je l'ai vu, j'ai été détruit...",
+    " (Preuve Vidéo)",
+    " (ʘ_ʘ)",
+    " ಠ_ಠ",
     " "
   ]
 
@@ -97,15 +105,17 @@ var servers = {};
     "MP3/Amazon.wav"
   ]
   var game = [
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-    ({ game: { name: "rip codforlan - ::help", type: 3} }),
-
+    ({ game: { name: "Cette fille s'est suicidée à cause de cette vidéo. quand je l'ai vu, j'ai été détruit...", type: 3, url: "https://www.youtube.com/watch?v=lBUIgZhtZ74"} }),
+    ({ game: { name: "Une fille aide la police a apprivoiser un ours polaire sauvage…", type: 3, url: "https://www.youtube.com/watch?v=DECWgDPv3As"} }),
+    ({ game: { name: "Je suis bloqué dans ce labyrinthe depuis 2 jours, envoyez moi de l'aide...", type: 3, url: "https://www.youtube.com/watch?v=PJ1ZghbmqXc"} }),
+    ({ game: { name: "Si je n'avais pas filmé ma prof en train de faire ça, personne ne m'aurait cru...", type: 3, url: "https://www.youtube.com/watch?v=lk6LtG4584M"} }),
+    ({ game: { name: "Un enfant tombe accidentellement sur son amoureuse en sport...", type: 3, url: "https://www.youtube.com/watch?v=QHfwHE4BnpQ"} }),
+    ({ game: { name: "Si j'avais pas filmé ça, personne ne m'aurait cru...", type: 3, url: "https://www.youtube.com/watch?v=6Dmm3IQr6q8"} }),
+    ({ game: { name: "Un chien retrouve son maitre après 3 ans de séparation...", type: 3, url: "https://www.youtube.com/watch?v=6YevuTWaIrc"} }),
+    ({ game: { name: "Des jumelles se rencontrent pour la toute première fois...", type: 3, url: "https://www.youtube.com/watch?v=GAZSfsSwRHE"} }),
+    ({ game: { name: "il a essayé d'empêcher la vitre de se casser...", type: 3, url: "https://www.youtube.com/watch?v=uQXqBmueGJE"} }),
+    ({ game: { name: "il a essayé d'empêcher la vitre de se casser...", type: 3, url: "https://www.youtube.com/watch?v=uQXqBmueGJE"} }),
+    ({ game: { name: "G Rex - SHUT UP!", type: 2 } })
     
   ]
 
@@ -149,17 +159,14 @@ bot.on("message", function (message) {
   switch (args[0]) {
   //INTRO RANDOM
       case "intro":
-        if (!message.member.voiceChannel) {
+      if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream((intro[Math.floor(Math.random() * intro.length)]))
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::intro") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -170,14 +177,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/chips verte.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::chip") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -188,14 +192,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/labyrinthe.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::labi") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -205,14 +206,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/labyrinthe.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::laby")
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -222,14 +220,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/labyrinthe.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::labyrinthe") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -240,14 +235,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/ours.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::ours") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -258,14 +250,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/crise.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::crise") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -276,55 +265,44 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::rubiks") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
-    break;
+      break;
 
     case "cube":
-       if (!message.member.voiceChannel) {
-       return;
-       }
-       if (message.member.voiceChannel) {
-       message.member.voiceChannel.join().catch(console.error)
-       .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
-       stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::cube") 
-      stream.on (message.guild.voiceChannel).leave().catch(console.error)
-       return;
-       })
-       } else {
-       return;
-       }
-    break;
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.member.voiceChannel) {
+        const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
+      } else {
+      return;
+      }
+      break;
 
   //OH LE CHAT OHHHHHHH
       case "chat":
-       if (!message.member.voiceChannel) {
-       return;
-       }
-       if (message.member.voiceChannel) {
-       message.member.voiceChannel.join().catch(console.error)
-       .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/chat.wav")
-       stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::chat") 
-      stream.on (message.guild.voiceChannel).leave().catch(console.error)
-       return;
-       })
-       } else {
-       return;
-       }
-    break;
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.member.voiceChannel) {
+        const stream = message.guild.voiceConnection.playStream("MP3/chat.wav")
+      } else {
+      return;
+      }
+      break;
 
 
   //GIVEAWAY
@@ -346,72 +324,57 @@ bot.on("message", function (message) {
 
   //AMOUREUX
     case "amoureux":
-       if (!message.member.voiceChannel) {
-       return;
-       }
-       if (message.member.voiceChannel) {
-       message.member.voiceChannel.join().catch(console.error)
-       .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
-       stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::amoureux")
-       stream.on (message.guild.voiceChannel).leave().catch(console.error)
-       return;
-       })
-       } else {
-       return;
-       }
-    break;
-
-    case "sport":
-       if (!message.member.voiceChannel) {
-       return;
-       }
-       if (message.member.voiceChannel) {
-       message.member.voiceChannel.join().catch(console.error)
-       .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
-       stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::sport")
-       stream.on (message.guild.voiceChannel).leave().catch(console.error)
-       return;
-       })
-       } else {
-       return;
-       }
-    break;
-
-    case "amour":
-       if (!message.member.voiceChannel) {
-       return;
-       }
-       if (message.member.voiceChannel) {
-       message.member.voiceChannel.join().catch(console.error)
-       .then (connection => {
-       const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
-       stream.on('end', () => (message.guild.voiceConnection).disconnect())
-       if (message.content === "::amour")
-       stream.on (message.guild.voiceChannel).leave().catch(console.error)
-       return;
-       })
-       } else {
-       return;
-       }
-    break;
-
-  //CARTE RANDOM
-    case "carte":
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
+        const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
+      } else {
+      return;
+      }
+      break;
+
+    case "sport":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.member.voiceChannel) {
+        const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
+      } else {
+      return;
+      }
+      break;
+
+    case "amour":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.member.voiceChannel) {
+        const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
+      } else {
+      return;
+      }
+      break;
+
+  //CARTE RANDOM
+    case "carte":
+      if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.member.voiceChannel) {
         const stream = message.guild.voiceConnection.playStream((carte[Math.floor(Math.random() * carte.length)]))
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::carte") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -422,14 +385,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/carte.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::googleplay") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -438,14 +398,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/carte.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::google") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -454,14 +411,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/carte.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::gp") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -472,14 +426,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/Amazon.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::amazon") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -490,14 +441,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/itunes.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::itunes") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -506,14 +454,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/itunes.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::tunes") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -522,14 +467,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/itunes.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::it") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -540,14 +482,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/jumelles.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::jumelles") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -558,14 +497,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/hallu.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::hallu") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -576,14 +512,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/papa.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::papa")
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -594,14 +527,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/tg.mp3")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::tg")
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -612,14 +542,11 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/glace.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::glace") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
@@ -630,40 +557,47 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
         if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().catch(console.error)
-        .then (connection => {
         const stream = message.guild.voiceConnection.playStream("MP3/doigt.wav")
-        stream.on('end', () => (message.guild.voiceConnection).disconnect())
-        if (message.content === "::doigt") 
-        stream.on (message.guild.voiceChannel).leave().catch(console.error)
-        })
       } else {
       return;
       }
       break;
 
+  //JOIN
+      case "join":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (message.guild.voiceConnection) {
+        return;
+        }
+        if (message.member.voiceChannel) { 
+        message.member.voiceChannel.join()
+        }
+      break;
+
+  //STOP
+      case "stop":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        return;
+        }
+        if (message.member.voiceChannel) {
+        message.guild.voiceConnection.disconnect()
+        }
+      break;
+
+
   //TITRE
       case "titre":
       message.channel.sendMessage((titre1[Math.floor(Math.random() * titre1.length)]) + (titre2[Math.floor(Math.random() * titre2.length)]) + (titre3[Math.floor(Math.random() * titre3.length)])).catch(console.error)
       break;
-
-  //STOP
-    case "stop":
-        var server = servers[message.guild.id];
-        if (!message.guild.voiceConnection) {
-          return;
-        }
-        if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect()
-        break;
-
-    case "leave":
-        var server = servers[message.guild.id];
-        if (!message.guild.voiceConnection) {
-          return;
-        }
-        if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect()
-        break;
 
   //AIDE
     case "help":
@@ -671,29 +605,14 @@ bot.on("message", function (message) {
        .setAuthor((citation[Math.floor(Math.random() * citation.length)]))
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
-       .setFooter("Bot créé par Flygoow, avec DiscordJS.\n Astuce : ", "https://i.imgur.com/vUJwkr1.png")
+       .setFooter("Bot créé par Flygoow, avec DiscordJS." + (" Ping :" +  (new Date().getTime() - message.createdTimestamp) + " ms"), "https://i.imgur.com/vUJwkr1.png")
        .setDescription("📄 = Commandes textuelles.\n🎙 = Commandes audio\n[B] = Commandes en cours de développement")
        .addBlankField(true)
+       .addField("Utilisez la commande ::join avant d'utiliser les commandes audio.")
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
-       .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire [N'existe pas encore] [B]** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
-       .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres** - ::titre")
-      message.channel.sendEmbed(embed);
-      break;
-
-    default:
-      var embed = new Discord.RichEmbed()
-       .setAuthor((citation[Math.floor(Math.random() * citation.length)]))
-       .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
-       .setColor(0xe1e6e9)
-       .setFooter("Bot créé par Flygoow, avec DiscordJS.\n Astuce : ", "https://i.imgur.com/vUJwkr1.png")
-       .setDescription("📄 = Commandes textuelles.\n🎙 = Commandes audio\n[B] = Commandes en cours de développement")
-       .addBlankField(true)
-       .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
-       .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
-       .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
-       .addField("MISC. 🎙", "**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Une citation aléatoire [N'existe pas encore] [B]** - ::citationvoc\n**Ta gueule** - ::tg\nPour que le bot dégage** - ::stop ou ::leave")
+       .addField("MISC. 🎙", "**Rejoindre un salon vocal** - ::join\n**Quitter un salon vocal** - ::stop\n**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Ta gueule** - ::tg")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres** - ::titre")
       message.channel.sendEmbed(embed);
       break;
