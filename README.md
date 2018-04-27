@@ -17,3 +17,5 @@ Ensuite, voici les étapes à suivre afin de pourvoir hoster le bot :
 * Téléchargez les fichiers du bot, et allez sur "index.js".
 * Trouvez la ligne bot.login et replacez "BOT_TOKEN" par le Token de votre bot.
 * Lancez-le avec le .bat inclus.
+
+[![Discord Bots](https://discordbots.org/api/widget/status/389084304124280832.svg)](https://discordbots.org/bot/389084304124280832)
