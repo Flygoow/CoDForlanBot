@@ -614,6 +614,7 @@ bot.on("message", function (message) {
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
        .addField("MISC. 🎙", "**Rejoindre un salon vocal** - ::join\n**Quitter un salon vocal** - ::stop\n**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Ta gueule** - ::tg")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres** - ::titre")
+       .addField("Envie d'inviter le CoD Forlan Bot pour votre serveur ?", "Rendez-vous ici : http://flygoow.party/codforlan")
       message.channel.sendEmbed(embed);
       break;
   }
