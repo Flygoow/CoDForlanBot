@@ -608,12 +608,13 @@ bot.on("message", function (message) {
        .setFooter("Bot créé par Flygoow, avec DiscordJS." + (" Ping :" +  (new Date().getTime() - message.createdTimestamp) + " ms"), "https://i.imgur.com/vUJwkr1.png")
        .setDescription("📄 = Commandes textuelles.\n🎙 = Commandes audio\n[B] = Commandes en cours de développement")
        .addBlankField(true)
-       .addField("Utilisez la commande ::join avant d'utiliser les commandes audio.")
+       .addField("Utilisez la commande ::join avant d'utiliser les commandes audio.", "Merci les mecs")
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
        .addField("MISC. 🎙", "**Rejoindre un salon vocal** - ::join\n**Quitter un salon vocal** - ::stop\n**Une carte cadeau aléatoire** - ::carte\n**Une intro aléatoire** - ::intro \n**Ta gueule** - ::tg")
        .addField("Commandes textuelles 📄", " **Faire un giveaway** - ::giveaway\n**Générateur de titres** - ::titre")
+       .addBlankField(true)
        .addField("Envie d'inviter le CoD Forlan Bot pour votre serveur ?", "Rendez-vous ici : http://flygoow.party/codforlan")
       message.channel.sendEmbed(embed);
       break;
