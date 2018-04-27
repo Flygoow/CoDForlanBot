@@ -1,5 +1,6 @@
 # CoD Forlan Bot
 C'est un bot fait sur DiscordJS. Il est open-source afin que tout le monde puisse le voir. Voilà. Il est hébergé sur Heroku aussi.
+http://flygoow.party/codforlan
 
 ### Installer le bot
 Si vous voulez host le bot vous même ou bien si vous voulez y ajouter des fonctions, vous pouvez installer le bot.
