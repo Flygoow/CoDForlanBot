@@ -186,6 +186,20 @@ bot.on("message", function (message) {
       return;
       }
       break;
+      
+     case "chips":
+        if (!message.member.voiceChannel) {
+        return;
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/chips verte.wav")
+      } else {
+      return;
+      }
+break;
 
   //LABYRINTHE
     case "labi":
