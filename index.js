@@ -165,7 +165,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream((intro[Math.floor(Math.random() * intro.length)]))
       } else {
       return;
@@ -180,7 +180,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/chips verte.wav")
       } else {
       return;
@@ -195,7 +195,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/labyrinthe.wav")
       } else {
       return;
@@ -209,7 +209,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/labyrinthe.wav")
       } else {
       return;
@@ -223,7 +223,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/labyrinthe.wav")
       } else {
       return;
@@ -238,7 +238,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/ours.wav")
       } else {
       return;
@@ -253,7 +253,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/crise.wav")
       } else {
       return;
@@ -268,7 +268,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
       } else {
       return;
@@ -282,7 +282,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/rubik.wav")
       } else {
       return;
@@ -297,7 +297,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/chat.wav")
       } else {
       return;
@@ -330,7 +330,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
       } else {
       return;
@@ -344,7 +344,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
       } else {
       return;
@@ -358,7 +358,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/amoureux.wav")
       } else {
       return;
@@ -373,7 +373,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream((carte[Math.floor(Math.random() * carte.length)]))
       } else {
       return;
@@ -388,7 +388,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/carte.wav")
       } else {
       return;
@@ -401,7 +401,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/carte.wav")
       } else {
       return;
@@ -414,7 +414,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/carte.wav")
       } else {
       return;
@@ -429,7 +429,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/Amazon.wav")
       } else {
       return;
@@ -444,7 +444,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/itunes.wav")
       } else {
       return;
@@ -457,7 +457,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/itunes.wav")
       } else {
       return;
@@ -470,7 +470,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/itunes.wav")
       } else {
       return;
@@ -485,7 +485,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/jumelles.wav")
       } else {
       return;
@@ -500,7 +500,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/hallu.wav")
       } else {
       return;
@@ -515,7 +515,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/papa.wav")
       } else {
       return;
@@ -530,7 +530,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/tg.mp3")
       } else {
       return;
@@ -545,7 +545,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/glace.wav")
       } else {
       return;
@@ -560,7 +560,7 @@ bot.on("message", function (message) {
         if (!message.guild.voiceConnection) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
-        if (message.member.voiceChannel) {
+        if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/doigt.wav")
       } else {
       return;
@@ -605,10 +605,10 @@ bot.on("message", function (message) {
        .setAuthor((citation[Math.floor(Math.random() * citation.length)]))
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
-       .setFooter("Bot créé par Flygoow, avec DiscordJS." + (" Ping : " +  (new Date().getTime() - message.createdTimestamp) + " ms"), "https://i.imgur.com/vUJwkr1.png")
+       .setFooter("Bot créé par Flygoow, avec DiscordJS." + (" Ping :" +  (new Date().getTime() - message.createdTimestamp) + " ms"), "https://i.imgur.com/vUJwkr1.png")
        .setDescription("📄 = Commandes textuelles.\n🎙 = Commandes audio\n[B] = Commandes en cours de développement")
        .addBlankField(true)
-       .addField("Utilisez la commande ::join avant d'utiliser les commandes audio.", "Merci les mecs")
+       .addField("Utilisez la commande ::join avant d'utiliser les commandes audio.")
        .addField("Cartes cadeaux 🎙", "**Google Play** - ::googleplay ou ::google ou ::gp\n**Amazon** - ::amazon\n**iTunes** - ::itunes ou ::tunes ou ::it")
        .addField("Intros 🎙", "**Labyrinthe** - ::laby \n**Ours** - ::ours \n**Crise** - ::crise \n**Rubiks Cube** - ::cube ou ::rubiks \n**Tombe sur son amoureuse en sport** - ::amoureux \n**Jumelles** - ::jumelles\n**Vous allez perdre votre nom** - ::hallu\n**Mon chat est mort à cause des glaces** - ::glace\n**PAPA, SAUVE MOI** - ::papa\n**MAIS QUEL ENFOIRE** - ::doigt")
        .addField("Citations 🎙", "**OH LE CHAT OOHHHHH** - ::chat")
