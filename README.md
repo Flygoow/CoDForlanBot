@@ -18,4 +18,7 @@ Ensuite, voici les étapes à suivre afin de pourvoir hoster le bot :
 * Trouvez la ligne bot.login et replacez "BOT_TOKEN" par le Token de votre bot.
 * Lancez-le avec le .bat inclus.
 
+### Commandes
+http://flygoow.party/codforlan/commandes
+
 [![Discord Bots](https://discordbots.org/api/widget/status/389084304124280832.svg)](https://discordbots.org/bot/389084304124280832)
