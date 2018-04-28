@@ -1469,7 +1469,7 @@ bot.on("message", function (message) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
         if (message.guild.voiceConnection) {
-        const stream = message.guild.voiceConnection.playStream("MP3/oh.wav")
+        const stream = message.guild.voiceConnection.playStream("MP3/ytpmvsample.wav")
       } else {
       return;
       }
