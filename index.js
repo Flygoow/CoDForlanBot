@@ -1431,7 +1431,7 @@ bot.on("message", function (message) {
       break;
 
   //WOUH
-      case "volcan":
+      case "wouh":
         if (!message.member.voiceChannel) {
         message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
         }
