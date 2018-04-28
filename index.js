@@ -131,7 +131,7 @@ var servers = {};
     "MP3/coca.wav",
     "MP3/anniv.wav",
     "MP3/arthur.wav",
-    "MP3/ascenceur.wav",
+    "MP3/ascenseur.wav",
     "MP3/bus.wav",
     "MP3/cassetoi.wav",
     "MP3/claude.wav",
@@ -324,6 +324,21 @@ bot.on("message", function (message) {
         }
         if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream("MP3/ours.wav")
+      } else {
+      return;
+      }
+      break;
+
+  //POULE
+    case "poule":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/poule.wav")
       } else {
       return;
       }
@@ -739,8 +754,8 @@ bot.on("message", function (message) {
       }
       break;
 
-  //ASCENCEUR
-      case "ascenceur":
+  //ASCENQEUR
+      case "ascenseur":
         if (!message.member.voiceChannel) {
         message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
         }
@@ -748,7 +763,7 @@ bot.on("message", function (message) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
         if (message.guild.voiceConnection) {
-        const stream = message.guild.voiceConnection.playStream("MP3/ascenceur.wav")
+        const stream = message.guild.voiceConnection.playStream("MP3/ascenseur.wav")
       } else {
       return;
       }
