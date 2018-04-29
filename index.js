@@ -235,6 +235,11 @@ bot.on('message', (message) => {
 
 bot.on("message", function (message) {
   if (message.author.equals(bot.user)) return;
+  if (cooldown.has(message.author.id)){
+    message.delete();
+    return message.reply("laisse moi respirer ! Attends 5 secondes avant la prochaine commande.")
+  }
+  cooldown.add(message.author.id)
   if (!message.content.startsWith(prefix)) return;
 
   var args = message.content.substring(prefix.length).split(" ")
