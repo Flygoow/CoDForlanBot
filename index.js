@@ -5,7 +5,7 @@ const ddiff = require('return-deep-diff');
 const prefix = "::";
 const fs = require("fs");
 let cooldown = new Set();
-let cdsecondes = 5;
+let cdsecondes = 2;
 
 var cli = new Discord.Client({autoReconnect:true});
 
@@ -237,10 +237,9 @@ bot.on('message', (message) => {
 bot.on("message", function (message) {
   if (message.author.equals(bot.user)) return;
   if (message.content.startsWith(prefix)) {
+    message.delete(100);
   if (cooldown.has(message.author.id)){
-    message.delete(100);
-    return message.reply("laisse moi respirer ! Attends 5 secondes avant la prochaine commande.")
-    message.delete(100);
+    return message.reply("laisse moi respirer ! Attends 2 secondes avant la prochaine commande.")
   }
   cooldown.add(message.author.id)
   }
