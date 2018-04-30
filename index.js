@@ -1708,7 +1708,7 @@ bot.on("message", function (message) {
        .setThumbnail((MafiaSquad[Math.floor(Math.random() * MafiaSquad.length)]))
        .setColor(0xe1e6e9)
        .setFooter("Bot créé par Flygoow, avec DiscordJS." + (" Ping : " +  (new Date().getTime() - message.createdTimestamp) + " ms"), "https://i.imgur.com/vUJwkr1.png")
-       .addField("Coucou je suis là pour vous aider","Pour voir toutes les commandes, rendez-vous ici : http://flygoow.party/codforlan/commandes")
+       .addField("Coucou je suis là pour vous aider","Pour voir toutes les commandes, rendez-vous ici : http://flygoow.party/codforlan/commandes\nSi vous aimez ce bot, vous pouvez voter pour lui sur Discord Bots : https://discordbots.org/bot/389084304124280832")
       message.channel.sendEmbed(embed);
       break;
   }
