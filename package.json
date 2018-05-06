@@ -3,6 +3,7 @@
   "main": "index.js",
   "dependencies": {
     "commando": "0.0.2",
+    "dbl-api": "^1.2.1",
     "discord-anti-spam": "^1.1.1",
     "discord-rich-presence": "0.0.1",
     "discord.js": "^11.1.0",
@@ -16,8 +17,7 @@
   "license": "ISC",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "description": ""
 }

@@ -3,9 +3,15 @@ const path = require('path');
 const bot = new Discord.Client();
 const ddiff = require('return-deep-diff');
 const prefix = "::";
+const DBL = require("dbl-api");
+const dbl = new DBL(process.env.bot_api_token, client);
 const fs = require("fs");
 let cooldown = new Set();
 let cdsecondes = 2;
+
+dbl.getStats("389084304124280832").then(stats => {
+    console.log(stats) // {"server_count":2,"shards":[]}
+});
 
 var cli = new Discord.Client({autoReconnect:true});
 
