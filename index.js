@@ -3,7 +3,6 @@ const path = require('path');
 const bot = new Discord.Client();
 const ddiff = require('return-deep-diff');
 const prefix = "::";
-const dbl = new DBL(process.env.bot_api_token, client);
 const fs = require("fs");
 let cooldown = new Set();
 let cdsecondes = 2;
