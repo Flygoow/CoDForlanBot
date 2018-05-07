@@ -13,6 +13,25 @@ var servers = {};
 
 //Les trucs aléatoires
   var sport = [
+    "MP3/ksport.mp3",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
+    "MP3/amoureux.wav",
+    "MP3/sport2.wav",
     "MP3/amoureux.wav",
     "MP3/sport2.wav"
   ]
@@ -70,6 +89,30 @@ var servers = {};
     " (ʘ_ʘ)",
     " ಠ_ಠ",
     " "
+  ]
+
+  var chips = [
+    "MP3/kchips.mp3",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav",
+    "MP3/chips verte.wav"
   ]
 
   var citation =[
@@ -172,7 +215,9 @@ var servers = {};
     "MP3/tsunami.wav",
     "MP3/voisin.wav",
     "MP3/voiture.wav",
-    "MP3/volcan.wav"
+    "MP3/volcan.wav",
+    "MP3/kchips.mp3",
+    "MP3/ksport.mp3"
   ]
 
   var rubiks = [
@@ -234,6 +279,7 @@ bot.on('message', (message) => {
     }
 
 }));
+
 bot.on("message", function (message) {
   if (message.author.equals(bot.user)) return;
   if (message.content.startsWith(prefix)) {
@@ -277,7 +323,36 @@ bot.on("message", function (message) {
         message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
         }
         if (message.guild.voiceConnection) {
-        const stream = message.guild.voiceConnection.playStream("MP3/chips verte.wav")
+        const stream = message.guild.voiceConnection.playStream((chips[Math.floor(Math.random() * chips.length)]))
+      } else {
+      return;
+      }
+      break;
+
+  //KIDDY CHIPS
+    case "kiddychip":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/kchips.mp3")
+      } else {
+      return;
+      }
+      break;
+
+    case "kchip":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/kchips.mp3")
       } else {
       return;
       }
@@ -471,6 +546,91 @@ bot.on("message", function (message) {
         }
         if (message.guild.voiceConnection) {
         const stream = message.guild.voiceConnection.playStream((sport[Math.floor(Math.random() * sport.length)]))
+      } else {
+      return;
+      }
+      break;
+
+  //KIDDY AMOUREUX
+    case "kiddyamoureux":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/ksport.mp3")
+      } else {
+      return;
+      }
+      break;
+
+    case "kiddysport":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/ksport.mp3")
+      } else {
+      return;
+      }
+      break;
+
+    case "kiddyamour":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/ksport.mp3")
+      } else {
+      return;
+      }
+      break;
+
+    case "kamoureux":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/ksport.mp3")
+      } else {
+      return;
+      }
+      break;
+
+    case "ksport":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/ksport.mp3")
+      } else {
+      return;
+      }
+      break;
+
+    case "kamour":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/ksport.mp3")
       } else {
       return;
       }
@@ -1687,6 +1847,7 @@ bot.on("message", function (message) {
         if (!message.member.voiceChannel) {
         return;
         }
+
         if (!message.guild.voiceConnection) {
         return;
         }
