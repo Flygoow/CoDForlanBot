@@ -343,6 +343,20 @@ bot.on("message", function (message) {
       return;
       }
       break;
+      
+     case "leffy":
+        if (!message.member.voiceChannel) {
+        message.channel.sendMessage("Tu n'es pas dans un salon vocal.")
+        }
+        if (!message.guild.voiceConnection) {
+        message.channel.sendMessage("Je ne suis pas dans un channel vocal ! Je dois rejoindre le channel vocal avec la commande ::join.")
+        }
+        if (message.guild.voiceConnection) {
+        const stream = message.guild.voiceConnection.playStream("MP3/leffy.mp3")
+      } else {
+      return;
+      }
+      break;
 
     case "kchip":
         if (!message.member.voiceChannel) {
