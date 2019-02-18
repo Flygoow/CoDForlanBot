@@ -278,6 +278,11 @@ bot.on('message', (message) => {
         message.channel.sendFile("./Images/delet.png")
     }
 
+       if(message.content.match (/Cod Forlan/i) && (message.content.match (/circonsis/i))) {
+        //Réponse aux insultes
+        message.channel.sendMessage("Je ne suis pas circonsis !")
+    }
+  
 }));
 
 bot.on("message", function (message) {
