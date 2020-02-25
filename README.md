@@ -20,5 +20,3 @@ Ensuite, voici les étapes à suivre afin de pourvoir hoster le bot :
 
 ### Commandes
 http://flygoow.party/codforlan/commandes
-
-[![Discord Bots](https://discordbots.org/api/widget/status/389084304124280832.svg)](https://discordbots.org/bot/389084304124280832)
